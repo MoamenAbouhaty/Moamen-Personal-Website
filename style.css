@@ -856,43 +856,67 @@ a:hover {
 
 .contact-form {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 3rem;
-    padding: 1.5rem;
+    padding: 2rem;
+
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
+
     text-align: left;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     margin-bottom: 1.25rem;
 }
 
 .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+
     color: var(--text-primary);
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group textarea {
+    display: block;
+
     width: 100%;
-    padding: 0.85rem 1rem;
+    max-width: 100%;
+
+    padding: 0.9rem 1rem;
+
     background: var(--bg-secondary);
     color: var(--text-primary);
+
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+
     font-family: var(--font-main);
     font-size: 0.95rem;
+    line-height: 1.5;
+
     outline: none;
+
     transition:
         border-color var(--transition-fast),
-        box-shadow var(--transition-fast),
-        background var(--transition-fast);
+        background var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.form-group input {
+    height: 48px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .form-group input::placeholder,
@@ -903,16 +927,32 @@ a:hover {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--accent-cyan);
-    background: var(--bg-tertiary);
-    box-shadow: 0 0 0 3px var(--accent-cyan-glow);
-}
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
+    background: var(--bg-tertiary);
+
+    box-shadow:
+        0 0 0 3px var(--accent-cyan-glow);
 }
 
 .form-submit {
     width: 100%;
-    margin-top: 0.5rem;
+    min-height: 48px;
+    margin-top: 0.25rem;
+
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .contact-form {
+        padding: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
 }
