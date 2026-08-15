@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moamen-abouhaty.netlify.app/sitemap.xml
