@@ -9,33 +9,62 @@ This website is a lightweight, responsive, and static single-page developer port
 - **HTML5**: Semantic tags, accessible structure, Open Graph tags.
 - **CSS3**: Custom properties (variables), Flexbox, CSS Grid, mobile-first design, dark theme.
 - **Vanilla JavaScript**: Mobile navigation toggle, dynamic date update, Intersection Observer scroll animations.
-- **Node.js**: Used solely for generating the site via built-in system APIs (`fs`, `path`).
+- **Vercel Web Analytics**: Real-time traffic insights and analytics.
+- **Node.js**: Used for building the bundled JavaScript file with analytics integration.
 
 ## 📁 Project Structure
 ```text
 moamen-personal-website/
 ├── index.html
 ├── style.css
-├── script.js
+├── script.js                  # Bundled JavaScript (generated)
+├── package.json               # Project dependencies
+├── package-lock.json          # Dependency lock file
 ├── README.md
 ├── netlify.toml
 ├── robots.txt
 ├── sitemap.xml
+├── .gitignore
+├── src/
+│   ├── script.js              # Source JavaScript
+│   └── analytics.js           # Vercel Analytics initialization
 └── assets/
     └── favicon.svg
 ```
 
 ## 🚀 How to Run Locally
-1. Open terminal in the project directory:
+1. Install dependencies:
    ```bash
-   cd moamen-personal-website
+   npm install
    ```
-2. Open `index.html` in any web browser directly:
+2. Build the JavaScript bundle (includes Vercel Analytics):
+   ```bash
+   npm run build
+   ```
+3. Open `index.html` in any web browser:
    - Double-click `index.html` OR
-   - Run a simple local HTTP server (optional):
+   - Run a simple local HTTP server:
      ```bash
      npx serve .
      ```
+
+## 🔧 Development
+- **Build once**: `npm run build`
+- **Watch mode**: `npm run build:watch` (auto-rebuilds on file changes)
+
+## 📊 Vercel Web Analytics
+This project includes Vercel Web Analytics for real-time traffic insights. The analytics will:
+- Automatically detect the environment (production vs development)
+- In development: Log events to the browser console
+- In production: Send analytics events to Vercel
+
+To enable analytics tracking in production:
+1. Deploy your site to Vercel
+2. Navigate to your project in the Vercel dashboard
+3. Go to **Analytics** in the sidebar
+4. Click **Enable Web Analytics**
+
+The analytics code is bundled into `script.js` and will start tracking automatically once enabled in your Vercel dashboard.
 
 ## 🌐 Deploying to Netlify
 1. Log in to [Netlify](https://app.netlify.app/).
