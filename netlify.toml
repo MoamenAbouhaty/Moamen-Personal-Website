@@ -2,7 +2,7 @@
 
 [build]
   publish = "."
-  command = ""
+  command = "npm install && npm run build"
 
 [[headers]]
   for = "/*"
