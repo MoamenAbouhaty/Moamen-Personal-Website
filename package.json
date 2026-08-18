@@ -1,0 +1,27 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "Personal developer portfolio website for Moamen Abouhaty (Back-End AI Engineer | Junior Software Engineer), created for FlyRank AI Internship assignment **PF-04**.",
+  "main": "script.js",
+  "scripts": {
+    "build": "esbuild analytics.js --bundle --minify --outfile=analytics.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoamenAbouhaty/Moamen-Personal-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoamenAbouhaty/Moamen-Personal-Website/issues"
+  },
+  "homepage": "https://github.com/MoamenAbouhaty/Moamen-Personal-Website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

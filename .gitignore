@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
